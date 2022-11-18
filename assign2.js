@@ -21,6 +21,7 @@ numButtons.forEach((button) => {
 
 calculator.addEventListener("click", (e) => {
   console.log(e.target.classList[1]);
+  console.log(e.target.className);
   if (e.target.id === "input1") {
     flag = 0;
   } else if (e.target.id === "input2") {
@@ -40,7 +41,8 @@ calculator.addEventListener("click", (e) => {
   } else if (e.target.classList[1] === "equal") {
     sum = `${method(+input1.value, +input2.value)}`;
     output.value = sum;
-  } else if (e.target.class === "reset") {
+  } else if (e.target.className === "reset") {
+    console.log("clicked");
     resetAll();
   }
 });
@@ -62,7 +64,10 @@ const divide = (num1, num2) => {
 };
 
 const resetAll = () => {
-  input1.reset();
-  input2.reset();
+  console.log(input1.value);
+  console.log(input2.value);
+  console.log("test");
+  input1.value = "";
+  input2.value = "";
   flag = 0;
 };
