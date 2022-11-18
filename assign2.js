@@ -28,13 +28,20 @@ calculator.addEventListener("click", (e) => {
   } else if (e.target.classList[1] === "plus") {
     console.log("plus");
     method = add;
+  } else if (e.target.classList[1] === "minus") {
+    console.log("minus");
+    method = subtract;
+  } else if (e.target.classList[1] === "divide") {
+    console.log("divide");
+    method = divide;
+  } else if (e.target.classList[1] === "multiply") {
+    console.log("multiply");
+    method = multiply;
   } else if (e.target.classList[1] === "equal") {
     sum = `${method(+input1.value, +input2.value)}`;
     output.value = sum;
   } else if (e.target.class === "reset") {
-    input1.reset();
-    input2.reset();
-    flag = 0;
+    resetAll();
   }
 });
 
@@ -42,10 +49,20 @@ const add = (num1, num2) => {
   return num1 + num2;
 };
 
-const subtract = () => {};
+const subtract = (num1, num2) => {
+  return num1 - num2;
+};
 
-const multiply = () => {};
+const multiply = (num1, num2) => {
+  return num1 * num2;
+};
 
-const divide = () => {};
+const divide = (num1, num2) => {
+  return num1 / num2;
+};
 
-const resetAll = () => {};
+const resetAll = () => {
+  input1.reset();
+  input2.reset();
+  flag = 0;
+};
