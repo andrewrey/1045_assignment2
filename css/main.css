@@ -2,9 +2,16 @@
   box-sizing: border-box;
 }
 
+h2 {
+  text-align: center;
+}
+
 section {
   border: 1px solid red;
-  width: 1100px;
+  width: 50%;
+  padding: 10px 0;
+  margin: 0 auto;
+  background-color: black;
 }
 
 .calculator__wrap {
@@ -50,7 +57,8 @@ input[type=text] {
   justify-content: center;
   align-items: center;
   justify-self: center;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+  box-shadow: 1px 2px 0 2px rgba(255, 255, 255, 0.7);
+  background-color: orange;
 }
 .keys div:active {
   -webkit-animation: click 0.3s forwards;
@@ -61,7 +69,6 @@ input[type=text] {
 }
 .keys .equal {
   grid-area: 4/3/5/4;
-  background-color: lightcoral;
 }
 .keys .multiply {
   grid-area: 4/4/5/5;
@@ -72,12 +79,12 @@ input[type=text] {
 
 @-webkit-keyframes click {
   100% {
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.4);
   }
 }
 
 @keyframes click {
   100% {
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.4);
   }
 }/*# sourceMappingURL=main.css.map */

@@ -27,15 +27,19 @@ calculator.addEventListener("click", (e) => {
   } else if (e.target.id === "input2") {
     flag = 1;
   } else if (e.target.classList[1] === "plus") {
+    flag = 1;
     console.log("plus");
     method = add;
   } else if (e.target.classList[1] === "minus") {
+    flag = 1;
     console.log("minus");
     method = subtract;
   } else if (e.target.classList[1] === "divide") {
+    flag = 1;
     console.log("divide");
     method = divide;
   } else if (e.target.classList[1] === "multiply") {
+    flag = 1;
     console.log("multiply");
     method = multiply;
   } else if (e.target.classList[1] === "equal") {
@@ -69,5 +73,6 @@ const resetAll = () => {
   console.log("test");
   input1.value = "";
   input2.value = "";
+  output.value = "";
   flag = 0;
 };
