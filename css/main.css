@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+section {
+  border: 1px solid red;
+  height: 50vh;
+  width: 1100px;
+}
+
+.calculator__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid black;
+  width: 100%;
+}
+.calculator__wrap input {
+  padding: 5px 0;
+}
+
+.name {
+  border: 1px solid black;
+  height: 50px;
+  padding: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+
+input[type=text] {
+  height: 50px;
+  width: 300px;
+  font-size: 1.3rem;
+}
+
+.keys {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
+  gap: 50px;
+}
+.keys div {
+  width: 90%;
+  height: 50px;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+}
+.keys div:active {
+  -webkit-animation: click 0.3s forwards;
+          animation: click 0.3s forwards;
+}
+.keys .zero {
+  grid-area: 4/2/5/3;
+}
+.keys .equal {
+  grid-area: 4/3/5/4;
+  background-color: lightcoral;
+}
+.keys .multiply {
+  grid-area: 4/4/5/5;
+}
+.keys .reset {
+  grid-area: 4/1/5/2;
+}
+
+@-webkit-keyframes click {
+  100% {
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@keyframes click {
+  100% {
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+  }
+}/*# sourceMappingURL=main.css.map */
